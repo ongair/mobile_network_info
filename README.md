@@ -1,13 +1,13 @@
 # Mobile::Network::Info
 
-TODO: Write a gem description
+Get up to date details about mobile network carriers
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'mobile-network-info'
+	gem 'mobile-network-info'
 ```
 
 And then execute:
@@ -20,7 +20,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Getting the carriers for a country
+
+```ruby
+	# The country code should be ISO 3166-1 alpha-2 code
+	# See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+
+	carriers = MobileNetworkInfo.get_carriers_by_country_code "ke"
+```
+
+### Getting detailed information for a carrier
+
+```ruby
+	carriers = MobileNetworkInfo.get_carriers_by_country_code "ke"
+	telco = carriers.first
+	puts telco[:name]
+	puts telco[:country_code]
+	puts telco[:country_name]
+	puts telco[:mcc]
+	puts telco[:mnc]
+```
 
 ## Contributing
 
