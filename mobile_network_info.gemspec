@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'mobile/network/info/version'
+require 'mobile_network_info/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "mobile-network-info"
-  spec.version       = Mobile::Network::Info::VERSION
+  spec.name          = "mobile_network_info"
+  spec.version       = MobileNetworkInfo::VERSION
   spec.authors       = ["Trevor Kimenye"]
   spec.email         = ["kimenye@gmail.com"]
   spec.summary       = %q{TODO: Get accurate network information for international mobile carriers.}
   spec.description   = %q{TODO: Get the MNC and MCC for a given network.}
-  spec.homepage      = "http://github.com/sproutke/mobile-network-info"
+  spec.homepage      = "http://github.com/sproutke/mobile_network_info"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
