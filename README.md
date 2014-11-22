@@ -23,15 +23,6 @@ Or install it yourself as:
 ### Getting the carriers for a country
 
 ```ruby
-	# The country code should be ISO 3166-1 alpha-2 code
-	# See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-
-	carriers = MobileNetworkInfo.get_carriers_by_country_code "ke"
-```
-
-### Getting detailed information for a carrier
-
-```ruby
 	carriers = MobileNetworkInfo.get_carriers_by_country_code "ke"
 	telco = carriers.first
 	puts telco[:name]
